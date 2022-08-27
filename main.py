@@ -48,8 +48,8 @@ def get_birthdaygirl():
     next = next.replace(year=next.year + 1)
   return (next - today).days
 
-  def get_birthdayboy():
-    nextboy = datetime.strptime(str(date.today().year) + "-" + birthday_boy, "%Y-%m-%d")
+def get_birthdayboy():
+  nextboy = datetime.strptime(str(date.today().year) + "-" + birthday_boy, "%Y-%m-%d")
   if nextboy < datetime.now():
     nextboy = nextboy.replace(year=nextboy.year + 1)
   return (nextboy - today).days

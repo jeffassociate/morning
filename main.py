@@ -49,10 +49,10 @@ def get_birthdaygirl():
   return (next - today).days
 
   def get_birthdayboy():
-  next = datetime.strptime(str(date.today().year) + "-" + birthday_boy, "%Y-%m-%d")
-  if next < datetime.now():
-    next = next.replace(year=next.year + 1)
-  return (next - today).days
+  nextboy = datetime.strptime(str(date.today().year) + "-" + birthday_boy, "%Y-%m-%d")
+  if nextboy < datetime.now():
+    nextboy = nextboy.replace(year=nextboy.year + 1)
+  return (nextboy - today).days
 
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
